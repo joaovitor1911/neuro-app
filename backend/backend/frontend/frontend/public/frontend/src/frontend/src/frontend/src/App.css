@@ -1,0 +1,184 @@
+/* NeuroApp - CSS Neurodivergente-Friendly */
+/* Dark Mode + Alta Legibilidade + Sem Distrações */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #1a1a2e;
+  color: #eaeaea;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: #16213e;
+  padding: 1.5rem 2rem;
+  border-bottom: 3px solid #0f3460;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #4ecca3;
+  font-size: 1.8rem;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.badge {
+  background: #0f3460;
+  color: #4ecca3;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard h2 {
+  color: #4ecca3;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Task Cards */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.task-card {
+  background: #16213e;
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 2px solid #0f3460;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.task-card:hover {
+  border-color: #4ecca3;
+  transform: translateX(4px);
+}
+
+.task-card.completed {
+  opacity: 0.6;
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+}
+
+.task-card input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #eaeaea;
+}
+
+.priority-badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.priority-alta {
+  border-left: 4px solid #ff4757;
+}
+
+.priority-média {
+  border-left: 4px solid #ffa502;
+}
+
+.priority-baixa {
+  border-left: 4px solid #4ecca3;
+}
+
+/* Info Card */
+.info {
+  margin-top: 2rem;
+}
+
+.card {
+  background: #16213e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #0f3460;
+}
+
+.card h3 {
+  color: #4ecca3;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #4ecca3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .main {
+    padding: 1rem;
+  }
+  
+  .task-card {
+    padding: 1rem;
+  }
+}
