@@ -189,44 +189,6 @@
         </div>
     </div>
 
-    <script>
-        let tasks = [];
-
-        function addTask() {
-            const input = document.getElementById('taskInput');
-            const taskText = input.value.trim();
-            
-            if (taskText) {
-                tasks.push({ text: taskText, completed: false });
-                input.value = '';
-                renderTasks();
-            }
-        }
-
-        function toggleTask(index) {
-            tasks[index].completed = !tasks[index].completed;
-            renderTasks();
-        }
-
-        function renderTasks() {
-            const taskList = document.getElementById('taskList');
-            taskList.innerHTML = tasks.map((task, index) => `
-                <li class="task-item ${task.completed ? 'completed' : ''}">
-                    <input type="checkbox" 
-                           ${task.completed ? 'checked' : ''} 
-                           onchange="toggleTask(${index})">
-                    <span>${task.text}</span>
-                </li>
-            `).join('');
-        }
-
-        document.getElementById('taskInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                addTask();
-            }
-        });
-    </script>
-    
     <!-- Módulos JavaScript -->
     <script src="js/app.js"></script>
     <script src="js/auth.js"></script>
